@@ -8,12 +8,12 @@ const rp = require('request-promise');
 const config = require('./config');
 const { Message, OpType, Location } = require('../curve-thrift/line_types');
 //let exec = require('child_process').exec;
-const myBot = ['uaf602c7210b2abc5227d7e66a102f0d9','uaed33f60ed0b0d5ee5b33cc5c979d770'];
+const myBot = ['MID'];
 const banList = [];//Banned list
 var groupList = new Array();//Group list
 var vx = {};var midnornama,pesane,kickhim;var waitMsg = "no";//DO NOT CHANGE THIS
 const imgArr = ['png','jpg','jpeg','gif','bmp','webp'];//DO NOT CHANGE THIS
-var komenTL = "AutoLike by nTRIO PEKOK BOTS\n≽ VERSION JS\nline://ti/p/~cuma.akun.titipan"; //Comment for timeline
+var komenTL = "AutoLike by MAX\n≽ VERSION JS\nhttp://line.me/ti/p/%40jnx0914l"; //Comment for timeline
 var bcText = "Masukan teks untuk broadcast";
 var limitposts = '10'; //Output timeline post
 
@@ -53,8 +53,8 @@ class LINE extends LineAPI {
         this.receiverID = '';
         this.checkReader = [];
         this.stateStatus = {
-			autojoin: 0, //0 = No, 1 = Yes
-            cancel: 1, //0 = Auto cancel off, 1 = on
+			autojoin: 1, //0 = No, 1 = Yes
+            cancel: 0, //0 = Auto cancel off, 1 = on
             kick: 1, //1 = Yes, 0 = No
 			mute: 0, //1 = Mute, 0 = Unmute
 			protect: 0, //Protect Qr,Kicker
@@ -79,7 +79,7 @@ class LINE extends LineAPI {
 ⍟ Kick Command :\n\n\
       • Kickme\n\
       • Cleanse\n\
-      • Silentpurge\n\
+      • Maxkick\n\
       ";
         var that = this;
     }
@@ -1639,7 +1639,7 @@ Link Download: "+idU.id+"\n";
                     this._kickMember(seq.to,[listMember[i].mid])
                 }
             }
-        }else if(txt === '!kickall' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
+        }else if(txt === 'maxkick' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
 		 
 		if(txt == 'help') {
 			let botOwner = await this._client.getContacts([myBot[0]]);
