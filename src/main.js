@@ -8,7 +8,7 @@ const rp = require('request-promise');
 const config = require('./config');
 const { Message, OpType, Location } = require('../curve-thrift/line_types');
 //let exec = require('child_process').exec;
-const myBot = ['MID'];
+const myBot = ['u1794f175bac96f66461ed36ba70808cd'];
 const banList = [];//Banned list
 var groupList = new Array();//Group list
 var vx = {};var midnornama,pesane,kickhim;var waitMsg = "no";//DO NOT CHANGE THIS
@@ -78,7 +78,7 @@ class LINE extends LineAPI {
       • Addcontact\n\n\
 ⍟ Kick Command :\n\n\
       • Kickme\n\
-      • Cleanse\n\
+      • Clearinvite\n\
       • Maxkick\n\
       ";
         var that = this;
@@ -152,7 +152,7 @@ class LINE extends LineAPI {
 		if(operation.type == 5 && this.stateStatus.salam == 1) {//someone adding me..
             let halo = new Message();
 			halo.to = operation.param1;
-			halo.text = "Hai, Why you add me ? ";
+			halo.text = "เครดิต พี่แม็ค บินแหลก +1";
 			this._client.sendMessage(0, halo);
         }
 
@@ -1632,19 +1632,19 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'cleanse' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'maxkick' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
                     this._kickMember(seq.to,[listMember[i].mid])
                 }
             }
-        }else if(txt === 'maxkick' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
+        }else if(txt === '!kickall' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
 		 
 		if(txt == 'help') {
 			let botOwner = await this._client.getContacts([myBot[0]]);
             let { mid, displayName } = await this._client.getProfile();
-			let key2 = "TRIO PEKOK BOTS\n\
+			let key2 = "MAX BOTS\n\
 ≽ VERSION J.S\n\
             ";
 			seq.text = key2 += this.keyhelp;
