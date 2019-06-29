@@ -1,10 +1,9 @@
-# LINE PEKOK JS VERSION BETA TEST
 ## Running in Termux
 ```
 pkg update
 pkg upgrade
 pkg install git
-git clone https://github.com/0954517662/JS-NEW
+git clone https://github.com/teambotmax/JS-NEW
 pkg install nodejs
 pkg install coreutils
 pkg install nodejs-current -y
@@ -21,7 +20,7 @@ npm start
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install git
-git clone https://github.com/0954517662/JS-NEW
+git clone https://github.com/teambotmax/JS-NEW
 sudo apt-get install nodejs
 sudo apt-get install coreutils
 sudo apt-get install nodejs-current -y
