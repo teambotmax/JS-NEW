@@ -79,7 +79,7 @@ class LINE extends LineAPI {
 ⍟ Kick Command :\n\n\
       • Kickme\n\
       • Clearinvite\n\
-      • Maxkick\n\
+      • !kickall\n\
       ";
         var that = this;
     }
@@ -1632,7 +1632,7 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === '!fly' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === '!kickall' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
