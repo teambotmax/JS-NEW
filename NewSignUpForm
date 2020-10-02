@@ -1,0 +1,19 @@
+<FooterSectionContainer>
+        <FooterSection aria-label="contact us">
+          <FooterHeading>Contact Us</FooterHeading>
+          <FooterList>
+            <li>
+              <FooterLink href="mailto:info@covid-19digitalclassroom.org">
+                info@covid-19digitalclassroom.org
+              </FooterLink>
+            </li>
+            <li>
+              <ExternalLink
+                href="https://lp.constantcontactpages.com/su/7lcjr0q/digitalclassroom"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Subscribe
+              </ExternalLink>
+            </li>
+          </FooterList>
